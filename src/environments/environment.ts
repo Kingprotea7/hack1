@@ -14,3 +14,4 @@ export const environment = {
     measurementId: 'G-3XXL5TF9R1',
   },
 };
+initializeApp(environment.firebase);

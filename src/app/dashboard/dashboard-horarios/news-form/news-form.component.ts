@@ -100,7 +100,7 @@ eliminarImagen(url:string){}
   async subirImagen1(event: any) {
     const file = event.target.files[0];
     if (file) {
-      const referencia = ref(this.storage, `carrusel/${file.name}`);
+      const referencia = ref(this.storage, `noticias/${file.name}`);
       try {
         await uploadBytes(referencia, file);
         console.log('Archivo subido con éxito a Firebase Storage.');
@@ -201,7 +201,7 @@ eliminarImagen(url:string){}
   /////FIRESTORAGE DE LOS PDF'S
   async cargarArchivos() {
     // Obtener la lista de archivos en la ruta deseada en Firebase Storage
-    const storageRef = ref(this.storage, 'carrusel/');
+    const storageRef = ref(this.storage, 'noticias/');
     const fileList = await listAll(storageRef);
 
     // Extraer los nombres de los archivos
@@ -210,7 +210,7 @@ eliminarImagen(url:string){}
 
   async borrarArchivo(nombreArchivo: string,event: Event  ) {
     // Construir una referencia al archivo que deseas borrar
-    const archivoRef = ref(this.storage, `carrusel/${nombreArchivo}`);
+    const archivoRef = ref(this.storage, `noticias/${nombreArchivo}`);
     event.stopPropagation();
     try {
       // Borrar el archivo
@@ -225,7 +225,7 @@ eliminarImagen(url:string){}
 //mostrar previamente pdf
 
 async getDownloadLink(archivo: string): Promise<string> {
-  const storageRef = ref(this.storage, `carrusel/${archivo}`);
+  const storageRef = ref(this.storage, `noticias/${archivo}`);
   try {
     const url = await getDownloadURL(storageRef);
     return url;
