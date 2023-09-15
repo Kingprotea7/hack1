@@ -1,0 +1,45 @@
+/* Colores más oscuros y bordes estilizados */
+.sidebar {
+  background-color: #343a40; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  padding: 10px; /* Reduce el espacio interno */
+  border: 1px solid #23272b; /* Borde con tono más oscuro */
+  border-radius: 10px; /* Bordes redondeados */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: #fff; /* Color de los enlaces */
+  text-decoration: none;
+  font-size: 18px; /* Tamaño de fuente más grande */
+  display: block;
+  text-align: center; /* Texto centrado */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #17a2b8; /* Borde en el botón */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave al pasar el mouse */
+}
+
+.sidebar a:hover {
+  background-color: #23272b; /* Cambia el color de fondo al pasar el mouse */
+  color: #17a2b8; /* Cambia el color del texto al pasar el mouse */
+  border-color: #17a2b8; /* Cambia el color del borde al pasar el mouse */
+}
+
+@media (max-width: 767px) {
+  /* Estilos para pantallas pequeñas */
+  .sidebar {
+    padding: 0; /* Sin espacio interno en dispositivos móviles */
+  }
+}

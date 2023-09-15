@@ -1,0 +1,12 @@
+/* Estilo base para todos los tamaños de pantalla */
+.pdf-item {
+   margin-bottom: 10px; /* Espacio predeterminado en todos los tamaños */
+ }
+ 
+ /* Aplica un margen más grande en dispositivos medianos y más grandes */
+ @media (min-width: 768px) {
+   .pdf-item {
+     margin-bottom: 20px; /* Espacio adicional en dispositivos medianos y más grandes */
+   }
+ }
+ 

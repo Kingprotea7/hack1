@@ -1,0 +1,69 @@
+<div class="container-fluid bg-dark text-white py-5">
+  <div class="content text-center">
+    <h1 class="display-4 mb-4 text-white">GALERIA INSTITUCIONAL</h1>
+    <p class="lead">Suba su imagen</p>
+    <input type="file" (change)="subirImagen($event)" class="form-control-file mb-3 btn btn-custom">
+    <div class="d-flex flex-wrap justify-content-center mt-4">
+      <!-- Muestra la imagen subida actual -->
+      <img *ngIf="imagenURL" [src]="imagenURL" alt="Imagen subida" class="img-fluid rounded" style="max-width: 400px; height: auto;">
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="content mt-3 d-flex flex-wrap">
+  <!-- Muestra todas las imágenes de Firebase -->
+  <ng-container *ngFor="let url of imagenesURLs; let i = index">
+    <ng-container *ngIf="paginaActual === calcularPaginaActual(i)">
+      <!-- Dentro del ng-container del ngFor -->     
+      <!-- Dentro del ngFor -->
+      <div class="content content-imagen">
+        <img [src]="url" alt="Imagen Firebase" style="max-width: 100%; height: auto;" class="clickable-image"
+          data-bs-toggle="modal" [attr.data-bs-target]="'#carruselModal' + i">
+        
+      </div>
+
+
+      <!-- Modal -->
+    <!-- ... Tu código HTML existente ... -->
+
+<!-- Modal -->
+<!-- Modal -->
+<div class="modal fade" id="carruselModal{{ i }}" tabindex="-1" aria-labelledby="carruselModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="carruselModalLabel">Imagen Ampliada</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Mostrar la imagen grande dentro del modal -->
+        <img [src]="url" alt="Imagen Firebase Ampliada" style="max-width: 100%; height: auto;">
+        <div class="d-flex justify-content-center mt-2">
+          <div class="text-center">
+            <button class="btn btn-primary mb-2" (click)="usarImagen(url)">Usar como</button>
+            <br>
+            <button class="btn btn-danger" (click)="eliminarImagen(url)">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </ng-container>
+  </ng-container>
+  <!-- Fin de las imágenes de Firebase -->
+</div>
+
+<div class="content mt-3 d-flex justify-content-center">
+  <!-- Botones de paginación en forma de cuadrados -->
+  <ng-container *ngFor="let numPagina of calcularNumerosPaginacion()">
+    <div class="numeracion-square" (click)="cambiarPagina(numPagina)">
+      {{ numPagina }}
+    </div>
+  </ng-container>
+</div>

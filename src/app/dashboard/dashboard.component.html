@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-header></app-header>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="d-flex justify-content-center align-items-center mb-4">
+        <app-app-logo></app-app-logo>
+      </div>
+      <app-sidebar></app-sidebar>
+    </div>
+    
+    <div class="col-md-9" > <!-- Ajustamos el tamaño aquí -->
+      <app-content *ngIf="isRouteA"></app-content>
+      <app-dasboard-multimedia *ngIf="isRouteB"></app-dasboard-multimedia>
+      <app-usuarios *ngIf="isRouteC"></app-usuarios>
+      <app-horarios *ngIf="isRouteD"></app-horarios>
+      <app-citas *ngIf="isRouteE"></app-citas>
+      <app-soporte *ngIf="isRouteF"></app-soporte>    
+    </div>
+    
+  </div>
+</div>

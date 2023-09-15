@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "colegiolqn": {
+      "hosting": {
+        "colegio": [
+          "colegiolqn"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "colegiolqn"
+  }
+}

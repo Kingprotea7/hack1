@@ -1,0 +1,27 @@
+<!-- register-modal.component.html -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Registro</h4>
+    <button type="button" class="close" aria-label="Cerrar" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <!-- Agrega aquí tus campos de registro -->
+    <form>
+      <div class="form-group">
+        <label for="username">Nombre de usuario</label>
+        <input type="text" class="form-control" id="username">
+      </div>
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input type="email" class="form-control" id="email">
+      </div>
+      <!-- Agrega más campos de registro aquí -->
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.dismiss()">Cancelar</button>
+    <button type="button" class="btn btn-primary">Registrarse</button>
+  </div>
+</ng-template>

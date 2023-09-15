@@ -1,0 +1,60 @@
+/* Estilo para quitar los bordes de los inputs */
+.no-border {
+   border: none;
+   border-bottom: 1px solid transparent; /* Quita los bordes y deja solo el borde inferior transparente */
+   padding: 5px; /* Ajusta el espaciado según tus preferencias */
+ }
+ 
+ /* Estilo para aumentar la altura del input de contenido */
+ .large-textarea {
+   height: 150px; /* Ajusta la altura según tus preferencias */
+ }
+ 
+ /* Estilo para el input de tipo file minimalista */
+ .minimal-file-input {
+   position: relative;
+   overflow: hidden;
+ }
+ 
+ .minimal-input {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+ }
+ 
+ .minimal-label {
+   display: block;
+   background-color: #227db9; /* Color de fondo para el botón de carga */
+   color: #fff; /* Color del texto del botón de carga */
+   padding: 10px 20px;
+   cursor: pointer;
+   border-radius: 5px;
+ }
+ 
+ .minimal-label i {
+   margin-right: 5px; /* Espacio entre el icono y el texto */
+ }
+ /* Agregar esta regla CSS para forzar saltos de línea en el textarea */
+.form-control.no-border {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  resize: none;
+  word-wrap: break-word; /* Agregar esta línea para forzar saltos de línea */
+}
+
+
+/* Estilo normal */
+.lista-archivos .archivo {
+  cursor: pointer;
+}
+
+/* Estilo al pasar el mouse por encima */
+.lista-archivos .archivo:hover {
+  background-color: #f2f2f2; /* Cambia el color de fondo al pasar el mouse */
+  color: #007bff; /* Cambia el color del texto al pasar el mouse */
+  font-weight: bold; /* Cambia el peso de la fuente al pasar el mouse */
+}

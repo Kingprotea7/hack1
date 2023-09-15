@@ -1,0 +1,29 @@
+/* valores.component.css */
+
+/* Tamaño de imagen predeterminado para pantallas grandes */
+.fixed-size-image {
+   width: 610px; /* Ancho fijo deseado en píxeles */
+   height: 200px; /* Alto fijo deseado en píxeles */
+   object-fit: cover; /* Ajusta la imagen para cubrir el tamaño especificado */
+   /* Centra vertical y horizontalmente la imagen */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ /* Ajuste de tamaño para pantallas medianas */
+ @media (max-width: 992px) {
+   .fixed-size-image {
+     width: 450px; /* Ancho fijo deseado en píxeles para pantallas medianas */
+     height: 150px; /* Alto fijo deseado en píxeles para pantallas medianas */
+   }
+ }
+ 
+ /* Ajuste de tamaño para pantallas pequeñas (móviles) */
+ @media (max-width: 768px) {
+   .fixed-size-image {
+     width: 350px; /* Ancho fijo deseado en píxeles para pantallas pequeñas (móviles) */
+     height: 100px; /* Alto fijo deseado en píxeles para pantallas pequeñas (móviles) */
+   }
+ }
+ 

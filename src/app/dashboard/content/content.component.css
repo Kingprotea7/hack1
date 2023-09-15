@@ -1,0 +1,144 @@
+/* Establecer colores y bordes */
+.content {
+  background-color: #f8f9fa; /* Color de fondo */
+  padding: 20px;
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.content h2 {
+  margin-bottom: 10px;
+  color: #333; /* Color del título */
+}
+
+.content p {
+  color: #555; /* Color del texto */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Color de fondo del botón primario */
+  border-color: #007bff; /* Color del borde del botón primario */
+  border-radius: 5px; /* Bordes redondeados para los botones */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+  border-color: #0056b3; /* Cambia el color del borde al pasar el mouse */
+}
+.numeracion {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.small-numeracion {
+  font-size: 12px;
+  padding: 2px 8px;
+  margin: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.numeracion-square {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  color: white;
+  margin: 2px;
+  cursor: pointer;
+}
+/* Estilo para las imágenes */
+img {
+  max-width: 300px; /* Ajusta el valor según el tamaño deseado */
+  height: auto;
+}
+/* Estilo para los content dentro del ngFor */
+.content-imagen {
+  max-width: 400px; /* Ajusta el valor según el tamaño deseado */
+  margin: 10px; /* Espaciado entre los content */
+}
+.clickable-image {
+  cursor: pointer; /* Cambiar el cursor a una mano */
+  border: 2px solid transparent; /* Agregar un borde transparente cuando pases el mouse */
+  transition: border-color 0.3s; /* Transición suave para el cambio de borde */
+}
+
+.clickable-image:hover {
+  border-color: #007bff; /* Cambiar el color del borde cuando pasas el mouse */
+}
+/* Importar la fuente de Google */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* Estilos personalizados */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  padding: 2rem;
+}
+
+.content {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lead {
+  color: #6c757d;
+}
+
+.text-primary {
+  color: #007bff;
+}
+
+.img-fluid {
+  border: 1px solid #dee2e6;
+}
+
+.btn-custom {
+  background-color: #0a0c0c;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: #138496;
+}
+/* Importar la fuente de Google */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* Estilos personalizados */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-primary {
+  color: #007bff;
+}
+
+.img-fluid {
+  border: 1px solid #dee2e6;
+}
+
+.btn-custom {
+  background-color: #394142;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: #1f0d11;
+}

@@ -1,0 +1,68 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Primer columna con lista de enlaces a PDFs -->
+    <div class="col-lg-6 bg-warning">
+      <div class="row">
+        <div class="col-12">
+          <div class="bg-dark text-white text-center py-3 border-bottom border-top">
+            <h2 class="">COMUNICADOS</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row h-100">
+        <div class="container my-4" style="max-height: 400px; overflow-y: auto;">
+          <h1 class="text-center text-white">Listado</h1>
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let pdfUrl of pdfUrls | async">
+              <!-- Agrega la clase 'mb-2' para espaciado vertical en dispositivos pequeños -->
+<div class="d-flex align-items-center mr-4">
+  <img src="../../assets/PDF_icon.svg.png" alt="PDF Icon" class="mr-3" width="30"> <!-- Imagen de ícono de PDF -->
+  <a [href]="pdfUrl" target="_blank" class="text-danger">{{ pdfUrl }}</a>
+</div>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Segunda columna con carrusel de imágenes -->
+    <div class="col-lg-6 bg-dark">
+      <div class="row">
+        <div class="col-12">
+          <div class="bg-primary text-white text-center py-3 border-bottom border-top">
+            <h2 class="">Noticias</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row h-100">
+        <div class="container my-4">
+          <h1 class="text-center text-white">NOTICIAS INSTITUCIONALES</h1>
+          <div id="pdfCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item" *ngFor="let pdfUrl of pdfUrls | async; let i = index" [ngClass]="{'active': i === 0}">
+                <div class="d-flex justify-content-center align-items-center">
+                  <a [href]="pdfUrl" target="_blank">
+                    <i class="fas fa-file-pdf fa-5x mr-3 text-danger"></i> <!-- Ícono de PDF -->
+                    {{ pdfUrl }}
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Los controles de navegación aquí 
+            <a class="carousel-control-prev" href="#pdfCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#pdfCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+              
+            </a>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="container">
+  <h2 class="mt-4">Crear Noticia</h2>
+  <form #newsForm="ngForm">
+    <div class="form-group">
+      <label for="title">Título:</label>
+      <input type="text" id="title" name="title" [(ngModel)]="news.title" class="form-control no-border" required>
+    </div>
+    <div class="form-group">
+      <label for="content">Contenido:</label>
+      <textarea id="content" name="content" [(ngModel)]="news.content" class="form-control no-border" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="date">Fecha:</label>
+      <input type="date" id="date" name="date" [(ngModel)]="news.date" class="form-control no-border" required min="2023-01-01">
+    </div>
+    <!-- Input de tipo file minimalista para la imagen -->
+    <div class="form-group minimal-file-input">
+      <label for="newsImage" class="minimal-label">
+        <i class="fas fa-cloud-upload-alt"></i> Subir Imagen
+      </label>
+      <input type="file" id="newsImage" name="image" (change)="onImageChange($event)" accept="image/*" class="minimal-input">
+    </div>
+
+    <!-- Botón para generar el PDF -->
+    <button type="button" class="btn btn-danger mt-3" (click)="generatePDF()">Generar PDF</button>
+
+    <!-- Input de tipo file para el PDF generado -->
+    <div class="form-group minimal-file-input mt-3" style="background-color: #28a745;">
+      <label for="archivoInput" class="minimal-label">
+        <i class="fas fa-file-pdf"></i> Subir PDF Generado
+      </label>
+      <input type="file" id="archivoInput" (change)="subirImagen($event)" accept=".pdf" class="minimal-input">
+    </div>
+    
+    
+  </form>
+
+  <h2 class="mt-5">Archivos Subidos</h2>
+  <div class="lista-archivos" *ngFor="let archivo of archivos">
+    <div class="d-flex justify-content-between align-items-center p-3 mb-3 border rounded archivo" (click)="abrirPDF(archivo)">
+      <span>{{ archivo }}</span>
+      <button class="btn btn-danger" (click)="borrarArchivo(archivo,$event)">Borrar</button>
+    </div>
+  </div>
+</div>
+
+

@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+*{
+  box-sizing: 0;
+  padding: 0;
+  margin: 0;
+
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Agrega la siguiente línea al archivo styles.css */
+@import "~bootstrap/dist/css/bootstrap.css";
+/* Estilos generales */
+
+@media (max-width: 767px) {
+  /* Estilos para pantallas pequeñas */
+  .navbar {
+    margin-bottom: 0;
+  }
+  
+  .sidebar {
+    padding: 10px;
+  }
+}

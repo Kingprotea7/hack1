@@ -1,0 +1,38 @@
+/* Estilos para el contenedor y los iconos */
+.container {
+  padding: 20px;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+.facebook {
+  background-color: #3b5998; /* Azul de Facebook */
+}
+
+.twitter {
+  background-color: #1da1f2; /* Azul de Twitter */
+}
+
+.instagram {
+  background-color: #e4405f; /* Rosado de Instagram */
+}
+
+.linkedin {
+  background-color: #0077b5; /* Azul de LinkedIn */
+}
+
+.social-icon i {
+  color: #fff; /* Iconos en blanco */
+}
+
+.social-icon:hover {
+  opacity: 0.8;
+}

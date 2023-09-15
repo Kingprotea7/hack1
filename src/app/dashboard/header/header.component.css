@@ -1,0 +1,92 @@
+/* Estilos para el encabezado */
+.navbar {
+  background-color: #333;
+  border-bottom: 2px solid #555;
+  padding: 15px 0;
+}
+@media (max-width: 767px) {
+  .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0;
+  }
+
+  .user {
+    display: none;
+  }
+}
+
+
+.navbar-brand {
+  font-size: 20px;
+  color: #fff;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #17a2b8;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 15px;
+  position: relative;
+}
+
+.navbar-nav .nav-item::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #17a2b8;
+  transition: width 0.3s;
+}
+
+.navbar-nav .nav-item:hover::before {
+  width: 100%;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user i {
+  margin-right: 5px;
+}
+
+@media (max-width: 767px) {
+  /* Estilos para dispositivos móviles */
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-size: 16px;
+  }
+
+  .user {
+    margin-top: 10px;
+  }
+}
+

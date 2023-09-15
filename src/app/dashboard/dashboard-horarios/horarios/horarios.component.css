@@ -1,0 +1,27 @@
+/* Establecer colores y bordes */
+.content {
+  background-color: #f8f9fa; /* Color de fondo */
+  padding: 20px;
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.content h2 {
+  margin-bottom: 10px;
+  color: #333; /* Color del título */
+}
+
+.content p {
+  color: #555; /* Color del texto */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Color de fondo del botón primario */
+  border-color: #007bff; /* Color del borde del botón primario */
+  border-radius: 5px; /* Bordes redondeados para los botones */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+  border-color: #0056b3; /* Cambia el color del borde al pasar el mouse */
+}

@@ -1,0 +1,12 @@
+/* app-logo.component.css */
+.app-logo {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.app-logo img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,42 @@
+/* src/styles.css */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+.navbar-nav li.nav-item:hover {
+  background-color: #ecb211; /* Cambia el color de fondo al hacer hover */
+}
+
+.navbar-nav li.nav-item:hover a.nav-link {
+  color: #ffffff; /* Cambia el color del texto al hacer hover */
+}
+
+/* Ajustar los estilos de los íconos y textos */
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  font-size: 20px; /* Tamaño de letra más grande */
+  color: #fff; /* Color blanco */
+  text-align: right; /* Alineación a la derecha */
+}
+
+/* Ajustar el espacio entre el ícono y el texto */
+.navbar-nav .nav-link i {
+  margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+/* Mover el navbar más a la derecha */
+.container {
+  justify-content: flex-end;
+}
+
+/* Centrar verticalmente el contenido de los elementos de la lista */
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+/* styles.css */
+.custom-dropdown-menu {
+  max-width: 200px; /* Ajusta el ancho máximo según tus necesidades */
+  width: auto; /* Evita que el ancho se ajuste automáticamente */
+}

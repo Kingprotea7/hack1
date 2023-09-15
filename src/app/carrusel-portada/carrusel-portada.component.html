@@ -1,0 +1,32 @@
+<div class="container-fluid bg-dark border">
+  <div id="myCarousel" class="carousel slide justify-content-center" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item" *ngFor="let imageUrl of imageUrls; let i = index" [ngClass]="{'active': i === 0}">
+        <img [src]="imageUrl" alt="Slide {{ i + 1 }}" class="d-block">
+        <div class="carousel-caption">
+          <h3>...{{ i + 1 }}</h3>
+          <p>... {{ i + 1 }}</p>
+        </div>
+      </div>
+    </div>
+    <!-- Controles del slider -->
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </a>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12">
+      <div class="alert alert-danger" role="alert">  
+        <hr>
+        <p class="mb-0 h1 text-center">"Familia, educación, respeto y disciplina: los cimientos para un futuro exitoso"</p>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+

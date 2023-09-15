@@ -1,0 +1,28 @@
+<div class="container-fluid bg-dark text-white py-5">
+  <div class="content text-center">
+    <h1 class="display-4 mb-4 text-white">CARRUSEL PORTADA</h1>
+    <p class="lead">Suba su imagen</p>
+    <input type="file" (change)="subirImagen($event)" class="form-control-file mb-3 btn btn-custom">
+    <div class="d-flex flex-wrap justify-content-center mt-4">
+      <!-- Muestra la imagen subida actual -->
+      <img *ngIf="imagenURL" [src]="imagenURL" alt="Imagen subida" class="img-fluid rounded" style="max-width: 400px; height: auto;">
+    </div>
+  </div>
+</div>
+<h2 class="mt-5 text-white">Archivos Subidos</h2>
+<div class="list-group mt-3">
+  <a href="#" class="list-group-item list-group-item-action bg-dark text-white" *ngFor="let archivo of archivos; let i = index">
+    <div class="d-flex justify-content-between align-items-center archivo">
+      <span>{{ i + 1 }}. {{ archivo }}</span>
+      <div class="btn-group" role="group">
+        <button class="btn btn-primary" (click)="abrirPDF(archivo)">Abrir</button>
+        <button class="btn btn-danger" (click)="borrarArchivo(archivo, $event)">Borrar</button>
+      </div>
+    </div>
+  </a>
+</div>
+
+
+
+
+
